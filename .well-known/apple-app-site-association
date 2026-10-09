@@ -4,7 +4,8 @@
       {
         "appIDs": ["B4M5PAMYJ8.com.lizixian.taptimer"],
         "components": [
-          { "/": "/t/*", "comment": "NFC 貼紙記錄連結" }
+          { "/": "/t/*", "comment": "NFC 貼紙記錄連結" },
+          { "/": "/join/*", "comment": "家庭邀請連結" }
         ]
       }
     ]

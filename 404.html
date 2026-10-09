@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TapTimer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f2f2f7;
+      --card: #ffffff;
+      --text: #1c1c1e;
+      --muted: #6e6e73;
+      --accent: #0a84ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f2f2f7;
+        --muted: #98989d;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+    main {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 22px;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+    p, li {
+      color: var(--muted);
+    }
+    .code {
+      font: 600 32px/1.2 ui-monospace, "SF Mono", Menlo, monospace;
+      letter-spacing: 4px;
+      color: var(--text);
+      margin: 20px 0;
+      word-break: break-all;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    strong {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card" id="content">
+      <h1>找不到這個頁面</h1>
+      <p>這個網址是 TapTimer 用的。</p>
+    </div>
+  </main>
+  <script>
+    // GitHub Pages 遇到不存在的網址會顯示這一頁；依網址顯示邀請或貼紙的說明。
+    // 有裝 TapTimer 的 iPhone 點這些連結會直接打開 App，不會看到這一頁。
+    const parts = location.pathname.split('/').filter(Boolean);
+    const content = document.getElementById('content');
+
+    function show(title, blocks) {
+      content.replaceChildren();
+      const heading = document.createElement('h1');
+      heading.textContent = title;
+      content.append(heading, ...blocks);
+    }
+
+    function paragraph(text) {
+      const element = document.createElement('p');
+      element.textContent = text;
+      return element;
+    }
+
+    function steps(items) {
+      const list = document.createElement('ol');
+      for (const text of items) {
+        const item = document.createElement('li');
+        item.textContent = text;
+        list.append(item);
+      }
+      return list;
+    }
+
+    if (parts[0] === 'join' && parts[1]) {
+      // 邀請碼只會有英文字母和數字，其他字元一律拿掉
+      const code = parts[1].toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+      const codeElement = document.createElement('div');
+      codeElement.className = 'code';
+      codeElement.textContent = code;
+      document.title = 'TapTimer 家庭邀請';
+      show('你收到 TapTimer 的家庭邀請', [
+        paragraph('邀請碼：'),
+        codeElement,
+        steps([
+          '先在 iPhone 安裝 TapTimer（目前還在測試，請向邀請你的家人詢問安裝方式）。',
+          '打開 TapTimer，點左上角的「家庭」，再點「用邀請碼加入別的家庭」。',
+          '輸入上面的邀請碼和你的稱呼。',
+        ]),
+        paragraph('邀請碼 7 天內有效，只能用一次。已經裝好 TapTimer 的 iPhone，點邀請連結會直接打開 App。'),
+      ]);
+    } else if (parts[0] === 't') {
+      document.title = 'TapTimer 貼紙';
+      show('這是 TapTimer 的 NFC 貼紙', [
+        paragraph('用 iPhone 碰一下貼紙，再點跳出來的通知，就會記錄。'),
+        paragraph('要先安裝 TapTimer，並加入這張貼紙所屬的家庭。'),
+      ]);
+    }
+  </script>
+</body>
+</html>
