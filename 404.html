@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TapTimer</title>
+  <title>上次</title>
   <style>
     :root {
       color-scheme: light dark;
-      --bg: #f2f2f7;
+      --bg: #f6f5f0;
       --card: #ffffff;
-      --text: #1c1c1e;
-      --muted: #6e6e73;
-      --accent: #0a84ff;
+      --text: #202724;
+      --muted: #52615f;
+      --accent: #176b63;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #000000;
-        --card: #1c1c1e;
-        --text: #f2f2f7;
-        --muted: #98989d;
+        --bg: #151a18;
+        --card: #202724;
+        --text: #f3f5f2;
+        --muted: #bbc7c2;
+        --accent: #79d6c7;
       }
     }
     body {
@@ -34,7 +35,7 @@
     }
     .card {
       background: var(--card);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 24px;
     }
     h1 {
@@ -64,12 +65,12 @@
   <main>
     <div class="card" id="content">
       <h1>找不到這個頁面</h1>
-      <p>這個網址是 TapTimer 用的。</p>
+      <p>這個網址是「上次」App 用的。</p>
     </div>
   </main>
   <script>
     // GitHub Pages 遇到不存在的網址會顯示這一頁；依網址顯示邀請或貼紙的說明。
-    // 有裝 TapTimer 的 iPhone 點這些連結會直接打開 App，不會看到這一頁。
+    // 有裝「上次」的 iPhone 點這些連結會直接打開 App，不會看到這一頁。
     const parts = location.pathname.split('/').filter(Boolean);
     const content = document.getElementById('content');
 
@@ -102,22 +103,22 @@
       const codeElement = document.createElement('div');
       codeElement.className = 'code';
       codeElement.textContent = code;
-      document.title = 'TapTimer 家庭邀請';
-      show('你收到 TapTimer 的家庭邀請', [
+      document.title = '「上次」家庭邀請';
+      show('你收到「上次」的家庭邀請', [
         paragraph('邀請碼：'),
         codeElement,
         steps([
-          '先在 iPhone 安裝 TapTimer（目前還在測試，請向邀請你的家人詢問安裝方式）。',
-          '打開 TapTimer，點左上角的「家庭」，再點「用邀請碼加入別的家庭」。',
+          '先在 iPhone 安裝「上次」（目前還在測試，請向邀請你的家人詢問安裝方式）。',
+          '打開「上次」，點左上角的家庭按鈕（兩個人的圖示），再點「用邀請碼加入別的家庭」。',
           '輸入上面的邀請碼和你的稱呼。',
         ]),
-        paragraph('邀請碼 7 天內有效，只能用一次。已經裝好 TapTimer 的 iPhone，點邀請連結會直接打開 App。'),
+        paragraph('邀請碼 7 天內有效，只能用一次。已經裝好「上次」的 iPhone，點邀請連結會直接打開 App。'),
       ]);
     } else if (parts[0] === 't') {
-      document.title = 'TapTimer 貼紙';
-      show('這是 TapTimer 的 NFC 貼紙', [
+      document.title = '「上次」貼紙';
+      show('這是「上次」的 NFC 貼紙', [
         paragraph('用 iPhone 碰一下貼紙，再點跳出來的通知，就會記錄。'),
-        paragraph('要先安裝 TapTimer，並加入這張貼紙所屬的家庭。'),
+        paragraph('要先安裝「上次」，並加入這張貼紙所屬的家庭。'),
       ]);
     }
   </script>
