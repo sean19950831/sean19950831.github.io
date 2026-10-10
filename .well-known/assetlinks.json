@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lizixian.lastdone",
+      "sha256_cert_fingerprints": [
+        "99:50:58:52:37:51:DE:CE:D5:5C:7B:D5:5C:4B:F8:5D:40:AF:D1:F7:BB:1A:E3:CE:19:53:5A:2E:12:2C:13:3F"
+      ]
+    }
+  }
+]
