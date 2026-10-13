@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>刪除「上次」帳號 Delete account</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f5f0;
+      --card: #ffffff;
+      --text: #202724;
+      --muted: #52615f;
+      --accent: #176b63;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151a18;
+        --card: #202724;
+        --text: #f3f5f2;
+        --muted: #bbc7c2;
+        --accent: #79d6c7;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 22px;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+    p, li {
+      color: var(--muted);
+    }
+    .code {
+      font: 600 32px/1.2 ui-monospace, "SF Mono", Menlo, monospace;
+      letter-spacing: 4px;
+      color: var(--text);
+      margin: 20px 0;
+      word-break: break-all;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    strong {
+      color: var(--text);
+    }
+  </style>
+  <style>
+    h2 { font-size: 18px; margin: 28px 0 8px; color: var(--text); }
+    .lang { margin-top: 40px; padding-top: 24px; border-top: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); }
+    .updated { font-size: 14px; }
+    a { color: var(--accent); }
+    .card + .card { margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>如何刪除「上次」的帳號</h1>
+      <p>「上次」（LastDone）由 LiTzuHsien 開發。你可以隨時刪除帳號和資料。</p>
+
+      <h2>在 App 裡刪除（最快）</h2>
+      <ol>
+        <li>打開「上次」，點左上角的「群組」。</li>
+        <li>往下捲，點「刪除我的帳號」。</li>
+        <li>確認後，用 Apple 或 Google 登入過的帳號要再登入一次，確認是你本人。</li>
+      </ol>
+      <p>如果你是某個群組唯一的建立者，要先把另一位成員設成建立者，才能刪除帳號。</p>
+
+      <h2>沒辦法打開 App 時</h2>
+      <p>請用登入時的 email 寄信到 <a href="mailto:sean19950831@gmail.com">sean19950831@gmail.com</a>，主旨寫「刪除帳號」。我們確認是你本人後，會在 30 天內刪除。</p>
+
+      <h2>會刪除什麼、保留什麼</h2>
+      <ul>
+        <li><strong>會刪除</strong>：你的帳號、email、稱呼、推播的裝置登記、你自己取的群組名稱、你的地點，並讓你退出所有群組。沒有其他成員的群組（包括裡面的事項、紀錄、照片）會整個刪除。</li>
+        <li><strong>會保留</strong>：你在仍有其他成員的群組裡記過的紀錄和建立的事項，屬於那個群組，會繼續留著，顯示為「前成員」。</li>
+        <li>刪除後不能復原。</li>
+      </ul>
+
+      <div class="lang" lang="en">
+        <h1>How to delete your LastDone account</h1>
+        <p>LastDone (「上次」) is developed by LiTzuHsien. You can delete your account and data at any time.</p>
+        <h2>In the app (fastest)</h2>
+        <ol>
+          <li>Open LastDone and tap the Group button at the top left.</li>
+          <li>Scroll down and tap “Delete my account”.</li>
+          <li>Confirm. If you signed in with Apple or Google, sign in once more to confirm it’s you.</li>
+        </ol>
+        <p>If you are the only owner of a group, make another member an owner first.</p>
+        <h2>If you can’t open the app</h2>
+        <p>Email <a href="mailto:sean19950831@gmail.com">sean19950831@gmail.com</a> from the address you signed in with, with the subject “Delete account”. After confirming it’s you, we delete your account within 30 days.</p>
+        <h2>What is deleted and what is kept</h2>
+        <ul>
+          <li><strong>Deleted</strong>: your account, email, display name, push device registrations, your private group nicknames and your places; you are removed from all groups. Groups with no other members (including their items, records and photos) are deleted entirely.</li>
+          <li><strong>Kept</strong>: records and items you created in groups that still have other members belong to that group and remain, shown as “former member”.</li>
+          <li>Deletion cannot be undone.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
