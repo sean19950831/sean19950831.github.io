@@ -103,13 +103,13 @@
       const codeElement = document.createElement('div');
       codeElement.className = 'code';
       codeElement.textContent = code;
-      document.title = '「上次」家庭邀請';
-      show('你收到「上次」的家庭邀請', [
+      document.title = '「上次」群組邀請';
+      show('你收到「上次」的群組邀請', [
         paragraph('邀請碼：'),
         codeElement,
         steps([
-          '先在 iPhone 安裝「上次」（目前還在測試，請向邀請你的家人詢問安裝方式）。',
-          '打開「上次」，點左上角的家庭按鈕（兩個人的圖示），再點「用邀請碼加入別的家庭」。',
+          '先在 iPhone 安裝「上次」（目前還在測試，請向邀請你的人詢問安裝方式）。',
+          '打開「上次」，點左上角的群組按鈕（兩個人的圖示），再點「用邀請碼加入別的群組」。',
           '輸入上面的邀請碼和你的稱呼。',
         ]),
         paragraph('邀請碼 7 天內有效，只能用一次。已經裝好「上次」的 iPhone，點邀請連結會直接打開 App。'),
@@ -118,7 +118,7 @@
       document.title = '「上次」貼紙';
       show('這是「上次」的 NFC 貼紙', [
         paragraph('用 iPhone 碰一下貼紙，再點跳出來的通知，就會記錄。'),
-        paragraph('要先安裝「上次」，並加入這張貼紙所屬的家庭。'),
+        paragraph('要先安裝「上次」，並加入這張貼紙所屬的群組。'),
       ]);
     }
   </script>
