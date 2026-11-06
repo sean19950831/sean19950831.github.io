@@ -72,33 +72,41 @@
   <main>
     <div class="card">
       <h1>「上次」隱私權政策</h1>
-      <p class="updated">最後更新：2026 年 10 月 13 日</p>
+      <p class="updated">最後更新：2026 年 10 月 19 日</p>
       <p>「上次」（英文名稱 LastDone，以下稱本 App）由 LiTzuHsien 開發。本 App 用來記錄生活裡的事上次是什麼時候做的，並和家人、同事一起看、一起提醒。我們只收集讓這些功能運作所需要的資料。</p>
 
       <h2>我們收集哪些資料</h2>
       <ul>
         <li><strong>帳號</strong>：每個使用者有一組系統產生的帳號編號。選擇用 Apple 或 Google 登入時，會取得該帳號的 email（Apple 可能是隱藏的轉寄信箱），只用來登入，只顯示在你自己的畫面上，其他成員看不到。</li>
-        <li><strong>你輸入的內容</strong>：群組名稱、你的稱呼、事項（名稱、圖示、顏色、時間設定、分享和提醒的對象）、紀錄（誰在什麼時候做了、選填的數字例如里程）、事項的照片、NFC 貼紙的編號。</li>
+        <li><strong>你輸入的內容</strong>：群組名稱、你的稱呼、事項（名稱、選填的備註例如型號和使用方式、圖示、顏色、時間設定、分享和提醒的對象）、紀錄（誰在什麼時候做了、選填的數字例如里程、奶量、體重、血糖或運動時間，也可能包含服藥等健康紀錄）、事項的照片、NFC 貼紙的編號。</li>
         <li><strong>裝置資料</strong>：推播通知用的裝置代碼、App 版本、語系，用來傳送提醒。</li>
-        <li><strong>你設定的地點</strong>：你存的地點（例如公司、老家的名稱、位置和範圍）和在那裡要先看的事項，用來在你到了附近時，把那些事項放在最上面。只有你看得到。手機現在的位置只在手機上比對，<strong>不會上傳</strong>。</li>
-        <li><strong>防濫用</strong>：使用 Apple App Attest／Google Play Integrity 確認請求來自正版 App，不會取得你的個人資料。</li>
+        <li><strong>你設定的地點</strong>：你存的地點（例如公司、老家的名稱、位置和範圍）和在那裡要先看的事項，用來在你到了附近時，把那些事項放在最上面。只有你看得到。手機會比對目前位置，把附近的事項排在前面；如果你選「目前位置」存成地點，位置就會同步到你的帳號。你可以拒絕定位或關閉精確位置。地圖和地址搜尋的說明在下方。</li>
+        <li><strong>防濫用</strong>：Firebase App Check 透過 Apple App Attest／Google Play Integrity 檢查裝置和 App。這些服務會處理驗證資料和代碼，防止假冒和濫用。</li>
       </ul>
-      <p>本 App <strong>沒有廣告、不追蹤你、不使用分析工具</strong>，也不會出售你的資料。</p>
+      <p>本 App <strong>沒有廣告、不做跨 App 廣告追蹤</strong>，也不出售你的資料。我們沒有加分析工具；Firebase 等套件會收必要的技術診斷資料，RevenueCat 會統計訂閱狀態，Android 地圖服務也會收使用和診斷資料。</p>
 
       <h2>資料用在哪裡、誰看得到</h2>
       <ul>
         <li>資料用來同步你的事項和紀錄、在到期時提醒你和其他成員。</li>
-        <li>同一個群組裡，被分享的成員看得到那些事項、紀錄、照片和大家的稱呼。沒有分享給他的事項，他看不到。</li>
-        <li>資料存放在 Google Firebase（位於台灣的 Google Cloud 資料中心）。推播透過 Apple 和 Google 的推播服務傳送。登入由 Apple、Google 提供。</li>
-        <li>付費訂閱由 App Store／Google Play 處理，我們拿不到你的付款資料。訂閱狀態由 RevenueCat 驗證和保存（購買紀錄和你的帳號編號，不含付款資料），用來讓同一個帳號在 iPhone 和 Android 都能使用。</li>
+        <li>同一個群組裡，被分享的成員看得到那些事項及其備註、紀錄、照片和大家的稱呼。沒有分享給他的事項，他看不到。</li>
+        <li>資料存在 Google Firebase。伺服器在台灣，但登入、推播等服務可能在其他地區處理。推播由 Apple／Google 傳送，內容可能有事項和群組名稱、時間、數字及完成者的稱呼。登入由 Apple、Google 提供。</li>
+        <li>你加入鎖定畫面小工具後，「顯示名稱」預設開啟，鎖定時旁人也可能看到事項或群組名稱及狀態。你可以在系統的小工具設定關閉「顯示名稱」，改成總覽只顯示件數、單一事項只顯示狀態，都沒有記錄按鈕。內容是否遮蔽也受系統隱私設定影響。小工具不包含備註。</li>
+        <li>事項備註和事項一起同步到 Firebase，只有看得到該事項的成員能讀取；有管理事項權限且看得到的人才能修改。我們不把備註放進推播通知、小工具資料或日誌。</li>
+        <li>付費訂閱由 App Store／Google Play 處理，我們拿不到你的付款資料。RevenueCat 保存你的購買紀錄和帳號編號，用來確認和統計訂閱，讓同一個帳號在 iPhone 和 Android 都能用。分享獎勵啟用後，我們會記下誰推薦誰、是否付費和獎勵紀錄，避免重複領取。</li>
       </ul>
 
       <h2>保存與刪除</h2>
       <ul>
         <li>帳號存在期間我們會保存你的資料。你可以隨時在 App 裡刪除帳號，方法見<a href="../delete-account/">如何刪除帳號</a>。</li>
-        <li>刪除帳號會刪除你的帳號、個人資料、裝置登記，並讓你退出所有群組。你在別人的群組裡記過的紀錄會留著，顯示為「前成員」；沒有其他成員的群組會整個刪除。</li>
+        <li>刪除帳號會刪除你的帳號、個人資料、裝置登記，並讓你退出所有群組。只有你看得到的事項（分享對象只有你）及其紀錄、照片、貼紙會刪除。和別人共用的事項和紀錄會留著，作者顯示為「前成員」。沒有其他成員的群組會整個刪除。</li>
+        <li>有管理事項權限的人可以清空備註，刪除該欄位；封存事項仍保留備註。刪帳時私人事項的備註一起刪除，共用事項的備註和事項一起保留，其他有管理事項權限且看得到的人可以修改或清空。</li>
         <li>登出時，手機上的資料會清除，雲端的資料保留，再登入就會回來。</li>
       </ul>
+
+      <h2>地圖與地址搜尋</h2>
+      <p>iPhone 使用 Apple MapKit。Android 使用 Google Maps SDK 顯示地圖，Google 會收 IP 位址、裝置和套件的技術資料、地圖操作、當機資料，以及不含姓名的識別碼。搜尋地址時，輸入的文字和搜尋範圍會交給手機的地址搜尋服務，服務商依手機而定。我們不保存搜尋歷史；你存下的地點名稱和位置會同步。你可以查看 <a href="https://www.google.com/policies/privacy/">Google 隱私權政策</a>與 <a href="https://maps.google.com/help/terms_maps/">Google 地圖使用條款</a>，以及 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。</p>
+      <p>裝置登記 60 天沒更新就會清掉。已完成或沒人認領的帳號搬家申請、已用過或過期的邀請，超過 30 天會清掉。還在處理的刪帳或搬家申請會留到完成。為了防止重複領獎，可能會保留經雜湊處理的購買識別碼和必要的獎勵紀錄。刪帳時會刪除你的個人帳務資料，也會請 RevenueCat 刪除客戶資料。</p>
+      <p><strong>刪除帳號不會取消訂閱。</strong>請另外到 App Store 或 Google Play 管理自動續訂，不必等訂閱到期才可刪帳。</p>
 
       <h2>兒童</h2>
       <p>本 App 不是專為 13 歲以下兒童設計，我們不會刻意收集兒童的個人資料。</p>
@@ -109,30 +117,37 @@
 
       <div class="lang" lang="en">
         <h1>LastDone Privacy Policy</h1>
-        <p class="updated">Last updated: October 13, 2026</p>
+        <p class="updated">Last updated: October 19, 2026</p>
         <p>LastDone (「上次」, “the app”) is developed by LiTzuHsien. It helps you record when things were last done and share them with family or coworkers in groups, with reminders. We only collect what the app needs to work.</p>
         <h2>What we collect</h2>
         <ul>
           <li><strong>Account</strong>: a system-generated user ID. If you sign in with Apple or Google, we receive that account’s email address (Apple may provide a private relay address). It is used only for sign-in and is shown only to you, never to other members.</li>
-          <li><strong>Content you enter</strong>: group names, your display name, items (name, icon, color, schedule, who they are shared with and who gets reminders), records (who did it and when, plus optional numbers such as mileage), item photos, and NFC sticker IDs.</li>
+          <li><strong>Content you enter</strong>: group names, your display name, items (name, optional notes such as model numbers or instructions, icon, color, schedule, who they are shared with and who gets reminders), records (who did it and when, plus optional numbers such as mileage, milk intake, weight, blood glucose or exercise time, and health-related records such as medication), item photos, and NFC sticker IDs.</li>
           <li><strong>Device data</strong>: a push notification token, app version and language, used to deliver reminders.</li>
-          <li><strong>Places you set</strong>: places you save (for example, the name, location and radius of your office or your parents’ home) and the items you want to see first there, used to show those items at the top when you are nearby. Only you can see them. Your current location is compared on the phone only and is <strong>never uploaded</strong>.</li>
-          <li><strong>Abuse prevention</strong>: Apple App Attest / Google Play Integrity verify that requests come from the genuine app. They do not give us personal data.</li>
+          <li><strong>Places you set</strong>: places you save (for example, the name, location and radius of your office or your parents’ home) and the items you want to see first there, used to show those items at the top when you are nearby. Only you can see them. Nearby sorting compares your current location on the phone. If you choose your current location and save a place, those coordinates are synced to your account. You can deny location access or disable precise location. Map and address-search processing is described below.</li>
+          <li><strong>Abuse prevention</strong>: Firebase App Check uses Apple App Attest / Google Play Integrity to process device and app verification information and tokens, helping verify requests and prevent abuse.</li>
         </ul>
-        <p>The app has <strong>no ads, no tracking and no analytics</strong>, and we never sell your data.</p>
+        <p>The app has <strong>no ads and no cross-app advertising tracking</strong>, and we never sell your data. We have not added analytics tools. Firebase and other SDKs collect necessary technical diagnostics, RevenueCat tracks subscription statistics, and Android map services collect usage and diagnostic data.</p>
         <h2>How it is used and who can see it</h2>
         <ul>
           <li>Your data is used to sync items and records and to remind you and other members when something is due.</li>
-          <li>Members of a group can see the items, records, photos and display names shared with them. Items not shared with someone are hidden from them.</li>
-          <li>Data is stored in Google Firebase (Google Cloud, Taiwan region). Notifications are delivered through Apple and Google push services. Sign-in is provided by Apple and Google.</li>
-          <li>Subscriptions are handled by the App Store / Google Play. We never receive your payment details. Subscription status is verified and stored by RevenueCat (purchase records and your account ID, no payment details) so the same account works on both iPhone and Android.</li>
+          <li>Members of a group can see the items and their notes, records, photos and display names shared with them. Items not shared with someone are hidden from them.</li>
+          <li>Data is stored in Google Firebase. Our server is in Taiwan, but sign-in, push notifications and other services may process data elsewhere. Apple and Google deliver notifications, which may include item and group names, times, numbers and the name of the person who completed an item. Apple and Google also provide sign-in.</li>
+          <li>If you add a Lock Screen widget, Show Names is on by default. Other people may see item or group names and their status while your device is locked. You can turn off Show Names in the system widget settings to show only counts in an overview or only the status of a single item, without a logging button. Redaction also depends on system privacy settings. Widgets do not include notes.</li>
+          <li>Item notes are synced to Firebase with the item. Only members who can see the item can read its notes; members who can manage items and see the item can edit them. We do not include notes in push notifications, widget data or logs.</li>
+          <li>Subscriptions are handled by the App Store / Google Play. We never receive your payment details. RevenueCat stores purchase records and your account ID to verify subscriptions and track subscription statistics. This lets you use the same account on iPhone and Android. When referral rewards are enabled, we keep referral, payment eligibility and reward records to prevent duplicate claims.</li>
         </ul>
         <h2>Retention and deletion</h2>
         <ul>
           <li>We keep your data while your account exists. You can delete your account in the app at any time; see <a href="../delete-account/">How to delete your account</a>.</li>
-          <li>Deleting your account removes your account, personal data and device registrations, and removes you from all groups. Records you made in other people’s groups stay and are shown as “former member”. Groups with no remaining members are deleted entirely.</li>
+          <li>Deleting your account removes your account, personal data and device registrations, and removes you from all groups. Items shared only with you, along with their records, photos and tags, are deleted. Shared items and records stay, with the author shown as “former member”. Groups with no remaining members are deleted entirely.</li>
+          <li>People who can manage an item can clear its notes, which deletes that field. Archiving keeps notes. Account deletion removes notes with private items; notes on shared items stay with the items and can be edited or cleared by other members who can see and manage them.</li>
           <li>Signing out clears the data on the phone. Your data stays in the cloud and returns when you sign in again.</li>
         </ul>
+        <h2>Maps and address search</h2>
+        <p>iPhone uses Apple MapKit. Android uses Google Maps SDK. Google collects IP addresses, device and SDK details, map interactions, crash data and identifiers that do not contain your name. Address searches send your text and search area to your phone’s search provider, which varies by device. We do not keep search history. Saved place names and coordinates are synced. See the <a href="https://www.google.com/policies/privacy/">Google Privacy Policy</a>, <a href="https://maps.google.com/help/terms_maps/">Google Maps Terms</a> and <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
+        <p>Device registrations are removed after 60 days without updates. Completed or unclaimed account moves and used or expired invitations are removed after 30 days. Pending deletion and account moves are kept until finished. We may keep hashed purchase identifiers and necessary reward records to prevent duplicate claims. Deleting your account removes your personal billing data, and we ask RevenueCat to delete your customer data.</p>
+        <p><strong>Deleting your account does not cancel subscriptions.</strong> Manage auto-renewal separately in the App Store or Google Play. You do not need to wait for a subscription to expire before deleting your account.</p>
         <h2>Children</h2>
         <p>The app is not directed at children under 13, and we do not knowingly collect their personal data.</p>
         <h2>Contact</h2>
