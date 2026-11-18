@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="非禮勿Cam 隱私權政策：資料保存、加密直連、權限與資料刪除。Privacy Policy in Chinese and English.">
+<title>隱私權政策｜非禮勿Cam</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+<header class="site-header wrap"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◉</span> 非禮勿Cam</a><nav aria-label="主要導覽"><a href="index.html">首頁</a><a href="privacy.html" aria-current="page">隱私權政策</a><a href="support.html">支援</a></nav></header>
+<main id="main" class="wrap legal"><nav class="language-nav" aria-label="政策語言"><a href="#zh">繁體中文</a><a href="#en" lang="en">English</a></nav><article id="zh">
+<h1>非禮勿Cam 隱私權政策</h1>
+<p class="meta">最後更新：2026 年 11 月 18 日・<a href="#en">English</a></p>
+
+<div class="summary">
+  <p><strong>一句話：</strong>非禮勿Cam 用一支放在家裡的手機當「主機」，連接你的攝影機並錄影；你用另一支手機觀看。影像、錄影和攝影機密碼都只存在你的手機上，在你的手機之間加密直接傳送。我們的伺服器協助兩支手機找到彼此、轉送通知，並接收你主動送出的診斷紀錄；看不到也不保存你的影像。我們不追蹤你、不放廣告，也不出售任何資料。</p>
+  <p>本政策說的「手機」也包括 iPad：主機和觀看端都可以是 iPhone 或 iPad。</p>
+</div>
+
+<p>本政策說明 非禮勿Cam（以下稱「本 App」，由 非禮勿Cam 開發團隊（以下稱「我們」）提供）如何處理資料。</p>
+
+<h2>1. 只留在你手機上的資料</h2>
+<p>以下資料只存在你自己的手機上，我們拿不到：</p>
+<ul>
+  <li><strong>攝影機的影像、聲音與錄影：</strong>存在主機手機上。超過你設定的容量時，會自動刪除最舊的錄影；你也可以隨時在 App 裡刪除。</li>
+  <li><strong>攝影機的帳號密碼、小米帳號的登入資訊：</strong>只存在主機手機的鑰匙圈（Keychain）。</li>
+  <li><strong>配對金鑰：</strong>每支手機自己產生金鑰；配對時以 QR code 交換公開金鑰。</li>
+  <li><strong>動靜紀錄、縮圖與 App 的記錄檔</strong>（錯誤與狀態）：只存在手機上，也不會進 iCloud 或電腦備份。除非你自己分享，否則不會傳給任何人。你在 App 裡「分享診斷記錄」時，已知的攝影機與主機名稱會換成代號，移除可辨識的 IP／MAC 位址，並遮蔽符合規則的密碼、token 與長十六進位字串；內容包含各攝影機偵測到動靜的時間。</li>
+  <li><strong>依地點通知：</strong>自行新增的地點名稱、座標、半徑及到達／離開規則儲存在觀看手機，不進 iCloud 或電腦備份。非禮勿Cam 不向主機或自有伺服器傳送座標；地點規則由 iOS 在觀看手機上比對，到達／離開時只向主機同步暫停／恢復通知的設定。若你也加入居家／外出判斷，兩項功能共用這個家的「家」圓圈，修改圓圈會同時影響兩項功能；刪除圓圈或取消套用到這個家會退出參與。刪除地點可移除該地點設定；刪除不會自動改變目前的通知暫停狀態。</li>
+  <li><strong>主機上的配對清單與推播金鑰：</strong>只存在主機手機上，不會進 iCloud 或電腦備份。</li>
+</ul>
+
+<h2>2. 在你的手機之間傳送的資料</h2>
+<ul>
+  <li><strong>居家／外出模式（自選）：</strong>主控邀請後，只有你在自己手機上同意加入才會啟用。與「依地點通知」共用的「家」圓圈（座標與半徑）只儲存在這支手機，不進 iCloud 或電腦備份。App 只經由與你家主機之間的加密直接連線，傳送「在家／不在家／未確認」、原因與發生時間，不傳送座標。主機據此切換攝影機動作，保存每支參與手機的最新狀態與最近 30 天內、最多 50 筆切換紀錄。我們的伺服器只協助建立連線，不會收到這些狀態。主控手機看得到每支參與手機在不在家；其他家人只看到「居家／外出」。你可隨時退出，不需主控同意；退出立即停止回報，連上主機後，主機會刪除這支手機的在家紀錄。</li>
+  <li><strong>即時畫面、回放與對講：</strong>在你的觀看手機和主機手機之間，以端對端加密的直接連線傳送：控制通道是雙方以配對金鑰互相驗證的 TLS 1.3，影像使用 WebRTC 的 DTLS／SRTP 加密，金鑰與配對身分綁定。在家時走家裡的網路；在外面時，兩支手機透過網路「打洞」直接連線。如果無法建立直接連線，本 App 會顯示連線失敗，不會改由任何伺服器轉送影像（我們不提供影像中繼）。</li>
+  <li><strong>主機狀態</strong>（攝影機是否在線、主機手機的溫度與電量等）：提供給你已配對的觀看手機。</li>
+  <li><strong>動靜通知的設定：</strong>你在觀看手機上打開通知時，它會透過加密的配對連線，把 Apple 推播代號和一把只屬於這組手機的金鑰交給你的主機手機。金鑰只在你的手機上；推播代號在送出通知時會經過我們的伺服器（見第 3 節）。</li>
+  <li><strong>新配對通知：</strong>有新的手機配對到你的主機時，主機會通知已打開通知的主控手機；新手機的名稱與角色用各主控手機的金鑰加密，只有你的手機看得到。</li>
+</ul>
+
+<h2>3. 我們的握手伺服器會經手的資料</h2>
+<p>為了讓你在外面也能連回家裡的主機，兩支手機會連到我們的握手伺服器（STUN 與加密的 WebSocket）。伺服器只處理建立直接連線所需的資料：</p>
+<ul>
+  <li>你的手機的公開 IP 位址與連接埠，用來告訴另一支手機怎麼直接連到你；握手訊息裡也包含手機在家用網路裡的區網位址（例如 192.168.x.x），伺服器轉交時看得到；</li>
+  <li>由配對金鑰產生的裝置識別碼（用來找到你的主機），以及建立連線用的握手訊息。這些訊息有簽章保護，伺服器無法冒充你的手機，也看不到你的影像或任何內容。</li>
+  <li><strong>動靜通知：</strong>主機手機要送通知時，會把觀看手機的 Apple 推播代號、主機的裝置識別碼，以及用觀看手機金鑰加密過的通知內容交給伺服器，由伺服器轉給 Apple 推播服務；伺服器也會知道通知的種類（動靜、新配對、確認、測試）與送出的時間。伺服器解不開內容（是哪台攝影機、什麼時間、哪支手機配對），通知上顯示的文字由伺服器固定為「有新的動靜」這類一般文字。主機的裝置識別碼不會交給 Apple。推播金鑰只放在伺服器上，不在 App 裡。</li>
+</ul>
+<p><strong>保存方式：</strong>上述資料只在連線或轉送通知期間存在伺服器的記憶體裡。為了防止濫用，IP 位址會暫存在記憶體中做流量限制，閒置 10 分鐘後刪除；觀看手機與主機的裝置識別碼會在記憶體中做連線請求次數限制，同樣閒置 10 分鐘後刪除；推播代號（以雜湊值保存）與裝置識別碼也會在記憶體中做通知數量限制，閒置一小時後刪除。握手與推播流程不會把 IP 位址、裝置識別碼或推播代號寫入硬碟或記錄檔。唯一寫入硬碟的是「主機曾接受過的觀看手機」清單，讓伺服器重新啟動後，已配對的手機不必和陌生連線請求搶同一份額度：每筆只有一個由「主機＋觀看手機」裝置識別碼算出的雜湊值（SHA-256）和最後一次連線的時間，不含 IP 位址、推播代號或識別碼原文；超過 7 天沒有連線的會刪除，最多保存 10 萬筆。你主動上傳的診斷紀錄另依下方說明保存。伺服器架設在 Amazon Web Services 東京區域。</p>
+
+<h2>4. 第三方服務</h2>
+<ul>
+  <li><strong>Apple：</strong>動靜通知經由我們的伺服器交給 Apple 推播服務（APNs）傳送。Apple 只看得到一般文字（例如「有新的動靜」）和你的裝置推播代號；是哪台攝影機、什麼時間，都經過加密，只有你的手機能解開。如果你訂閱本 App，付款和訂閱管理都由 Apple 處理，我們拿不到你的付款資訊。訂閱的手機會把 Apple 簽署的訂閱憑證，經加密的配對連線交給它綁定的主機，由主機在本機驗證並保存（不進 iCloud 或電腦備份）；我們的伺服器不經手任何訂閱或購買資料。</li>
+  <li><strong>Apple 地圖：</strong>通知地點選點畫面使用 Apple MapKit 圖資服務；顯示地圖時，會向 Apple 請求可視地圖範圍的圖資，依 Apple 的隱私權政策處理。這不表示地理資訊完全不離開手機；非禮勿Cam 不向主機或自有伺服器傳送座標。</li>
+  <li><strong>小米（只在你選擇登入小米帳號時）：</strong>主機手機會直接向小米的伺服器登入，以取得你的攝影機清單和連線資訊，這部分適用小米的隱私權政策。你的小米帳號資訊不會傳給我們。</li>
+  <li><strong>你的攝影機：</strong>本 App 依你的設定連到攝影機（例如 RTSP、ONVIF）。有些攝影機本身會連到製造商的服務，這部分由攝影機及其製造商的政策規範。</li>
+  <li>本 App <strong>沒有</strong>使用任何分析、廣告或追蹤工具。</li>
+</ul>
+
+<h2>5. App 要求的權限</h2>
+<ul>
+  <li><strong>本機網路：</strong>尋找並連接攝影機和家中的主機。</li>
+  <li><strong>相機：</strong>掃描配對用的 QR code。畫面不會被儲存或傳送。</li>
+  <li><strong>麥克風：</strong>只在你按下對講時使用，聲音只會送到你的攝影機。</li>
+  <li><strong>照片（僅新增）：</strong>把你截的圖或匯出的影片存到相簿。</li>
+  <li><strong>位置（自選）：</strong>只在你主動設定通知地點或居家／外出的「家」圓圈時要求使用期間定位；閱讀背景用途說明並選擇繼續後，才要求「永遠」，以便 App 在背景或未開啟時辨識到達／離開並暫停或恢復通知；若同意加入居家／外出判斷，也向你家主機回報狀態。居家／外出判斷需要「永遠」與「精確位置」。可隨時在 iOS 設定撤回權限；拒絕定位仍可觀看、手動管理通知及使用捷徑。位置不作廣告或分析用途。</li>
+  <li><strong>通知：</strong>動靜通知，可以隨時關閉。</li>
+  <li><strong>Face ID 或密碼：</strong>在主機上顯示配對 QR code、管理觀看手機、刪除錄影、調低錄影容量或關掉錄影前，確認是你本人；觀看手機也可以選擇用它鎖住 App。比對由 iOS 完成，本 App 拿不到你的臉部資料。</li>
+</ul>
+
+<h2>6. 你的選擇與資料刪除</h2>
+<ul>
+  <li>你可以在 App 裡刪除錄影、移除攝影機、解除配對。</li>
+  <li>關閉動靜通知後，觀看手機會在下次連到主機時，請主機刪除它的推播代號。</li>
+  <li>在觀看手機上移除主機時，它會請主機一併刪除這支手機的配對與推播代號；如果當時連不到主機，請在主機上移除這支手機。</li>
+  <li>刪除 App 會刪除這支手機上的錄影和設定。存在鑰匙圈裡的密碼，iOS 可能在刪除 App 後仍然保留；如果要一併清除，請先在 App 裡移除攝影機並登出小米帳號，再刪除 App。</li>
+  <li>握手與推播中繼資料依第 3 節在記憶體中到期刪除；若你另行分享相容回報給開發者，請依下方說明聯絡刪除。</li>
+</ul>
+
+<h3>自願分享攝影機相容資訊</h3>
+<p>非禮勿Cam 提供自願的攝影機相容資訊回報，協助改善不同型號的支援。這項功能由主控手機使用；家人手機只能預覽，不能送出。拒絕、取消或關閉加入後的詢問，不影響攝影機與 App 的功能。</p>
+<p>分享前，您可以閱讀逐項中文摘要、展開完整 JSON，並取消勾選不想分享的欄位。您按下「分享」後，App 才會開啟系統分享面板，由您選擇接收對象與分享方式。回報不會自動上傳，也不經我們的伺服器；未完成分享前可以取消。</p>
+<p>回報可包含攝影機廠牌、已辨識的公開型號、符合已知格式的韌體與硬體版本、相容配方與驗證等級、加入方式與結果、分類後的錯誤區域與代碼、串流規格及不含位址的路徑範本、功能判斷結果及依據，以及您自己做過且 App 已記錄的斷網測試結果。未取得的資料會省略或標示未知／未測，不會把配方中的實驗室結果當成您自己的測試。App 與 iOS 版本、iPhone／iPad 類別，以及系統設定的國家／地區，也可由您選擇是否分享；不包含城市或更詳細的位置。</p>
+<p>App 產生的回報附件及摘要不包含攝影機或主機 IP、MAC、序號、帳號密碼、攝影機名稱、家名、Wi-Fi 名稱、使用者或裝置識別碼、推播 token、截圖、影像或聲音。自訂串流路徑不會原樣分享。每份回報產生新的隨機回報 ID，不使用可連結同一使用者或裝置的固定識別碼。</p>
+<p>您選擇的郵件、訊息、雲端儲存或其他分享服務，可能另外附上寄件者、帳號等資料，並依該服務的隱私規則處理。這些資料不屬於 App 產生的回報內容。若您把回報寄給開發者，我們只會用於改善相容性及處理您提出的相關問題，不用於廣告或追蹤；如需刪除已收到的回報，請透過開發者聯絡方式提供回報 ID。</p>
+<p>手機只保留已完成分享的時間、您選擇分享的型號及回報 ID。您可在「已分享過的回報」刪除本機紀錄，並隨時關閉或重新開啟加入後的詢問。本機刪除不會撤回已經交給其他 App 或開發者的內容。系統分享面板回報完成代表已交給所選 App，不代表開發者已經收到。分享面板關閉後，App 會移除暫存的 JSON 附件。</p>
+
+<h3>你主動送出的診斷紀錄</h3>
+<p>非禮勿Cam 的「送給開發者」只在你預覽並確認後上傳。內容與匯出的遮蔽版本相同：錯誤、狀態與動靜時間、App／系統版本及裝置型號，已知的攝影機與主機名稱換成代號，移除可辨識的 IP／MAC 位址，並遮蔽符合規則的密碼、token 與長十六進位字串；不讀取影像、設定檔、金鑰檔或配對資料。你可附上最多 500 個 Unicode scalar 的描述；描述也套用相同遮蔽規則；規則無法辨識所有自由文字，請檢查預覽，勿填入個人資料或秘密。這與透過系統分享面板自行分享不同。</p>
+<p>我們僅用於排查問題、改善非禮勿Cam；回報分類為 diagnostic 或預留的 bug（供未來 BUG 回報審核，不代表已承諾獎勵）。伺服器以裝置簽章及主機配對核准驗證，將診斷紀錄、描述、隨機回報編號、時間與供限流用的裝置及核准主機識別雜湊保存最多 30 天，期限到後自動刪除（服務運行時每分鐘清理，停止時於重新啟動清理）。只有伺服器本機管理者能讀取，沒有公開讀取 API。可聯絡開發者並提供回報編號要求提前刪除；刪除 App 不會刪除已送出的回報。</p>
+
+<h2>7. 錄影與他人的隱私</h2>
+<p>攝影機可能會拍到家人、訪客或路人。請遵守你所在地關於錄影、錄音的法律，例如告知被拍攝的人，不要拍攝他人的私人空間。</p>
+
+<h2>8. 兒童</h2>
+<p>本 App 不是為 13 歲以下的兒童設計。我們不以兒童為對象蒐集資料。自願分享相容回報的資料處理方式見第 6 節。</p>
+
+<h2>9. 政策變更</h2>
+<p>如果本政策有重大變更，我們會在 App 內或本頁面公告，並更新上方的日期。</p>
+
+<h2>10. 聯絡我們</h2>
+<p>對本政策有任何問題，請寫信到 <a href="mailto:sean19950831@gmail.com">sean19950831@gmail.com</a>。</p>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>非禮勿Cam Privacy Policy</h1>
+<p class="meta">Last updated: November 18, 2026</p>
+
+<div class="summary">
+  <p><strong>In short:</strong> 非禮勿Cam turns a phone at home into a "host" that connects to your cameras and records; you watch from another phone. Video, recordings and camera passwords stay on your phones and travel directly between them, encrypted. Our server helps your phones find each other, forwards notifications and receives diagnostic reports you actively submit; it cannot see or store your video. We don't track you, show ads, or sell any data.</p>
+  <p>"Phone" in this policy includes iPad: the host and the viewers can each be an iPhone or an iPad.</p>
+</div>
+
+<p>This policy explains how 非禮勿Cam (the "App", provided by the Feiliwucam Team, "we") handles data.</p>
+
+<h2>1. Data that stays on your phones</h2>
+<ul>
+  <li><strong>Camera video, audio and recordings</strong> are stored on the host phone. The oldest recordings are deleted automatically when they exceed the space you set, and you can delete them in the App at any time.</li>
+  <li><strong>Camera usernames and passwords, and your Xiaomi sign-in</strong> are kept only in the host phone's Keychain.</li>
+  <li><strong>Pairing keys</strong> are created on each phone; pairing exchanges public keys by QR code.</li>
+  <li><strong>Motion history, thumbnails and app logs</strong> (errors and status) stay on the phone, out of iCloud and computer backups, unless you share them yourself. When you use "Share diagnostics" in the App, known camera and host names are replaced with codes, recognizable IP/MAC addresses are removed, and passwords, tokens and long hexadecimal strings matching the redaction rules are masked; the report does include when each camera detected motion.</li>
+  <li><strong>Location-based notifications:</strong> place names, coordinates, radii and arrival/departure rules are stored on the viewing phone, outside iCloud and computer backups. 非禮勿Cam does not send coordinates to the host or its own servers. iOS evaluates place rules on the viewing phone; arrivals and departures sync only the notification pause/resume setting to the host. If you also join Home/Away, both features share this home’s Home circle; editing it affects both features. Deleting the circle or removing its assignment to this home ends participation. Deleting a place removes that place setting without changing the current notification pause state.</li>
+  <li><strong>The host's pairing list and notification keys</strong> stay on the host phone, out of iCloud and computer backups.</li>
+</ul>
+
+<h2>2. Data sent between your phones</h2>
+<ul>
+  <li><strong>Home/Away mode (optional):</strong> after an invitation from the controlling phone, this feature starts only when you agree to join on your own phone. The Home circle (coordinates and radius), shared with location-based notifications, stays on that phone and is excluded from iCloud and computer backups. Over an encrypted direct connection to your home’s host, the App sends only home/away/unknown status, the reason and event time, never coordinates. The host uses this to apply camera actions and keeps each participating phone’s latest status and up to 50 mode changes from the last 30 days. Our servers only help establish the connection and do not receive these statuses. The controlling phone can see whether each participating phone is home; other family phones see only the overall Home/Away mode. You can leave at any time without the controller’s permission. Reporting stops immediately; once connected, the host deletes that phone’s presence records.</li>
+  <li><strong>Live video, playback and talk</strong> go over an end-to-end encrypted direct connection between your viewing phone and the host (TLS 1.3 with both sides authenticated by their pairing keys, and WebRTC's DTLS/SRTP for video, bound to those keys): over your home network at home, or a direct connection through the internet when you're away. If a direct connection can't be made, the App reports a failure; it never relays video through a server.</li>
+  <li><strong>Host status</strong> (whether cameras are online, the host phone's temperature and battery) is shared with your paired viewing phones.</li>
+  <li><strong>Notification settings:</strong> when you turn on notifications, the viewing phone gives your host phone, over the encrypted pairing link, its Apple push token and a key unique to that pair of phones. The key stays on your phones; the push token passes through our server when a notification is sent (see section 3).</li>
+  <li><strong>New pairing alerts:</strong> when another phone pairs with your host, the host tells the controlling phones that have notifications on; the new phone's name and role are encrypted with each controlling phone's key, so only your phones can read them.</li>
+</ul>
+
+<h2>3. What our handshake server handles</h2>
+<p>So you can reach your home host from anywhere, both phones connect to our handshake server (STUN and an encrypted WebSocket). It handles only what's needed to set up a direct connection:</p>
+<ul>
+  <li>your phone's public IP address and port, to tell the other phone how to reach it directly; the handshake messages also carry the phone's address on your home network (such as 192.168.x.x), which the server can see while passing them on;</li>
+  <li>a device identifier derived from the pairing key (to find your host) and the connection handshake messages. These are signed, so the server cannot impersonate your phones, and it cannot see your video or any content.</li>
+  <li><strong>Motion notifications:</strong> to send one, the host phone gives the server the viewing phone's Apple push token, the host's device identifier and the notification's contents encrypted with the viewing phone's key; the server passes it on to the Apple Push Notification service, and also learns the kind of notification (motion, new pairing, confirmation, test) and when it was sent. The server cannot read the contents (which camera, when, which phone paired); the text shown is fixed by the server to generic wording such as "new motion". The host's device identifier is not passed to Apple. The push key is kept on the server only, never in the App.</li>
+</ul>
+<p><strong>Retention:</strong> this data exists only in the server's memory while you connect or a notification is passed on. To prevent abuse, IP addresses are held in memory for rate limiting and forgotten after 10 minutes of inactivity; the viewing phone's and host's device identifiers are held in memory to limit connection requests, likewise forgotten after 10 minutes of inactivity; push tokens (as hashes) and device identifiers are held in memory to limit how many notifications are sent, and forgotten after an hour of inactivity. The handshake and push flows never write IP addresses, device identifiers or push tokens to disk or logs. The only thing written to disk is a list of viewing phones a host has accepted, so that after a server restart paired phones do not compete with unknown connection requests for the same allowance: each entry is a hash (SHA-256) computed from the host's and the viewing phone's device identifiers plus the time of the last connection, with no IP address, push token or identifier in readable form; entries with no connection for 7 days are deleted, and at most 100,000 are kept. actively submitted diagnostic reports follow the separate retention terms below. The server runs in Amazon Web Services, Tokyo region.</p>
+
+<h2>4. Third-party services</h2>
+<ul>
+  <li><strong>Apple:</strong> motion notifications are passed by our server to the Apple Push Notification service. Apple sees only generic text (such as "new motion") and your device's push token; which camera and when are encrypted so that only your phone can read them. If you subscribe, Apple handles payment and subscriptions; we never receive your payment details. The subscribing phone hands Apple's signed subscription record to the host it is bound to, over the encrypted pairing link, and the host checks and keeps it (out of iCloud and computer backups); our server never handles any subscription or purchase data.</li>
+  <li><strong>Apple Maps:</strong> the notification place picker uses Apple MapKit map services. Displaying the map requests map data for the visible map area from Apple, under Apple's privacy policy. This does not mean all geographical information stays on the phone; 非禮勿Cam does not send coordinates to the host or its own servers.</li>
+  <li><strong>Xiaomi (only if you sign in to a Xiaomi account):</strong> the host phone signs in directly with Xiaomi's servers to get your camera list and connection details; Xiaomi's privacy policy applies. Your Xiaomi account details are never sent to us.</li>
+  <li><strong>Your cameras:</strong> the App connects to your cameras as you set them up (for example RTSP or ONVIF). Some cameras contact their manufacturer's services on their own; that is governed by the camera and its manufacturer.</li>
+  <li>The App uses <strong>no</strong> analytics, advertising or tracking tools.</li>
+</ul>
+
+<h2>5. Permissions</h2>
+<ul>
+  <li><strong>Local network:</strong> to find and connect to your cameras and your host at home.</li>
+  <li><strong>Camera:</strong> to scan the pairing QR code; the picture is not stored or sent.</li>
+  <li><strong>Microphone:</strong> only while you hold talk; the sound goes only to your camera.</li>
+  <li><strong>Photos (add only):</strong> to save screenshots and clips you export.</li>
+  <li><strong>Location (optional):</strong> when you actively set a notification place or a Home circle for Home/Away, the App asks for When In Use access. It requests Always access only after you read the background-use explanation and choose to continue, to recognize arrivals/departures and pause or resume notifications while the App is in the background or not open. If you agree to join Home/Away, it also reports status to your home’s host; Home/Away requires Always access and Precise Location. You can revoke access in iOS Settings at any time. Viewing, manual notification controls and Shortcuts remain available without location permission. Location is not used for advertising or analytics.</li>
+  <li><strong>Notifications:</strong> motion notifications; you can turn them off at any time.</li>
+  <li><strong>Face ID or passcode:</strong> to confirm it's you before the host shows a pairing QR code, manages viewing phones, deletes recordings, lowers the recording space or turns recording off; a viewing phone can also use it to lock the App. iOS does the matching; the App never receives your face data.</li>
+</ul>
+
+<h2>6. Your choices and deleting data</h2>
+<ul>
+  <li>Delete recordings, remove cameras and unpair phones in the App.</li>
+  <li>When you turn off notifications, the viewing phone asks the host to delete its push token the next time they connect.</li>
+  <li>When you remove a host on a viewing phone, it asks the host to delete that phone's pairing and push token too; if the host can't be reached then, remove the phone on the host.</li>
+  <li>Deleting the App deletes its recordings and settings on that phone. iOS may keep Keychain passwords after the App is deleted; to remove them too, remove your cameras and sign out of Xiaomi in the App first.</li>
+  <li>Handshake and push relay data expires from memory as described in section 3. For a compatibility report you separately shared with the developer, request deletion as described below.</li>
+</ul>
+
+<h3>Voluntary camera compatibility reports</h3>
+<p>The App offers voluntary camera compatibility reports to help improve model support. Controlling phones can share reports; family phones can preview them. Declining, cancelling, or disabling the prompt after adding a camera does not affect camera or App functions.</p>
+<p>Before sharing, you can review a Chinese field-by-field summary, expand the full JSON, and deselect fields. Only after you tap Share does the App open the system share sheet, where you choose the recipient and service. Reports are not uploaded automatically or routed through our servers. You can cancel before completing the share.</p>
+<p>A report may include the camera brand and recognized public model, firmware and hardware versions in recognized formats, recipe and verification level, addition method and result, categorized error areas and codes, stream specifications and address-free path templates, feature assessments and their evidence, and offline tests you performed and the App recorded. Unavailable data is omitted or marked unknown/untested; recipe laboratory tests are not presented as your own tests. You may also choose to share App and iOS versions, iPhone/iPad class, and the system country/region setting, without a city or more precise location.</p>
+<p>The generated JSON and summary exclude camera and host IP addresses, MAC addresses, serial numbers, credentials, camera and home names, Wi-Fi names, user or device identifiers, push tokens, screenshots, video and audio. Unknown model strings and unrecognized version formats are omitted or marked unknown. Custom stream paths are not shared verbatim. Each report receives a new random report ID rather than a persistent user or device identifier.</p>
+<p>The email, messaging, cloud storage or other service you select may separately attach sender or account information under its own privacy rules. That information is outside the App-generated report. If you send a report to the developer, we use it only to improve compatibility and address related issues you raise, without advertising or tracking. To request deletion of a report we received, contact the developer with its report ID.</p>
+<p>The phone keeps only the completed-share time, your selected model and the report ID. You can delete that local record in Shared reports and turn the after-add prompt off or on. Local deletion does not recall content already handed to another App or the developer. A completion reported by the share sheet means the chosen App received the content, not that the developer received it. The App removes its temporary JSON attachment after the share sheet closes.</p>
+
+<h3>Diagnostic reports you actively submit</h3>
+<p>非禮勿Cam uploads a diagnostic report only after you preview and confirm Send to developer. It contains the same redacted logs as export: errors, status, motion times, App/OS versions and device model. Known camera and host names become codes; recognizable IP/MAC addresses are removed, and passwords, tokens and long hexadecimal strings matching the redaction rules are masked. Images, configuration files, key files and pairing data are not read. An optional description is limited to 500 Unicode scalars; the same redaction rules apply to it. Rules cannot recognize all free-form text, so review the preview and do not include personal information or secrets. This is separate from sharing through the system share sheet.</p>
+<p>Reports are used only to investigate issues and improve 非禮勿Cam. Metadata includes diagnostic or the reserved bug category for future bug-review workflows, without a reward promise. Device signatures and host pairing approval authenticate uploads. Reports, descriptions, random report IDs, timestamps and device and approving-host identifier hashes for rate limiting are kept for 30 days, then automatically removed (cleanup runs every minute while the service runs and on restart). Only local server administrators can read reports; there is no public read API. Contact the developer with the report ID for earlier deletion. Deleting the App does not recall uploaded reports.</p>
+
+<h2>7. Recording other people</h2>
+<p>Your cameras may record family members, visitors or passers-by. Please follow the laws on video and audio recording where you live, such as telling people they are being recorded and not filming other people's private spaces.</p>
+
+<h2>8. Children</h2>
+<p>The App is not directed to children under 13. We do not target children for data collection. Section 6 describes how voluntary compatibility reports are handled.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes materially, we will say so in the App or on this page and update the date above.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this policy: <a href="mailto:sean19950831@gmail.com">sean19950831@gmail.com</a>.</p>
+</section>
+</article></main>
+<footer class="site-footer wrap"><p class="brand">非禮勿Cam</p><p>家的畫面，留在你的掌心。</p><nav aria-label="頁尾導覽"><a href="privacy.html">隱私權政策</a><a href="support.html">支援與聯絡</a></nav></footer>
+</body>
+</html>
